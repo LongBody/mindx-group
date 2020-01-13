@@ -1,0 +1,299 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 13px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input {
+    width: 100%;
+    height: 38px;
+    padding: 10px;
+    border: 1px solid #eae9ea;
+    border-radius: 5px;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 120px;
+    height: 38px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    background: #4481fe;
+}
+
+.fa-user-circle {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:disabled {
+    background: #f2f2f2;
+}
+
+.register-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    background: url("../img/register-background.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.register-form {
+    min-width: 500px;
+    background: #ffffff;
+    padding: 0px 50px;
+}
+
+.log-in-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    background: url("../img/login-background.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.log-in-form {
+    min-width: 500px;
+    background: #ffffff;
+    padding: 0px 50px;
+}
+
+.form-header {
+    padding: 70px 0px;
+}
+
+.form-header>h3 {
+    text-align: center;
+    font-size: 32px;
+    color: #788195;
+}
+
+.form-content>* {
+    margin-bottom: 15px;
+}
+
+.name-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-wrapper>* {
+    width: calc(50% - 7px);
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-error {
+    color: #ff0000;
+}
+
+.message-success {
+    color: #00ff00;
+}
+
+
+/* chat */
+
+.chat-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.aside-left {
+    width: 25%;
+    padding: 10px;
+}
+
+.list-conversation {
+    min-height: 100px;
+    max-height: 60%;
+    overflow-y: scroll;
+}
+
+.conversation-title {
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.conversation:hover {
+    cursor: pointer;
+}
+
+.conversation.current {
+    background-color: gainsboro;
+}
+
+.conversation-member {
+    font-size: 12;
+    text-align: right;
+    font-style: italic;
+}
+
+.list-conversation>* {
+    margin-bottom: 10px;
+}
+
+.form-add-conversation>* {
+    margin-bottom: 10px;
+}
+
+.current-conversation {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-icon {
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+}
+
+.list-message {
+    padding: 10px;
+    height: calc(100% - 92px);
+    overflow-y: scroll;
+}
+
+.list-message>* {
+    margin-bottom: 10px;
+}
+
+.your {
+    text-align: right;
+}
+
+.your>.show-info:hover .none {
+    display: block;
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    right: 30px;
+    border: 1px solid black;
+    background-color: #000000;
+    color: #eae9ea;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.other>.show-info:hover .none {
+    display: block;
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    left: 28px;
+    border: 1px solid black;
+    background-color: #000000;
+    color: #eae9ea;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.show-info {
+    display: inline-block;
+    position: relative;
+}
+
+.none {
+    display: none;
+}
+
+.message span {
+    display: inline-block;
+    max-width: 50%;
+    padding: 10px;
+    border: 1px solid #4481fe;
+    border-radius: 5px;
+    color: #4481fe;
+    word-break: break-word;
+}
+
+.form-add-message {
+    display: flex;
+    height: 38px;
+}
+
+.form-add-message .input-wrapper {
+    width: calc(100% - 120px);
+    position: relative;
+}
+
+.thumb-up {
+    position: absolute;
+    right: 8px;
+    top: 10px;
+}
+
+.emoji-show {
+    position: absolute;
+    right: 40px;
+    top: 10px;
+}
+
+.fa-smile-beam {
+    font-size: 18px;
+}
+
+.sign-out-btn {
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+}
+
+.fa-thumbs-up {
+    font-size: 18px;
+}
+
+.thumb-up-show {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.thumb-up-show .fa-thumbs-up {
+    font-size: 30px;
+}
+
+#blah {
+    display: none;
+}
+
+.myImage {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
+.user-btn {
+    background-color: #fec225;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+}
+
+.aside-right {
+    width: 25%;
+    padding: 10px;
+}
