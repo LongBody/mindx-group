@@ -87,6 +87,13 @@ view.showComponents = async function(screenName) {
                         controller.logIn(logInInfo)
                     }
                 }
+                // forget password by firebase
+                let forgetPassword = document.getElementById("forget-password");
+                forgetPassword.onclick = forgetPasswordHandler
+
+                function forgetPasswordHandler() {
+                    view.showComponents('forgetPassword');
+                }
 
                 break
             }
@@ -228,6 +235,33 @@ view.showComponents = async function(screenName) {
 
 
 
+
+
+            }
+        case 'forgetPassword':
+            {
+                let app = document.getElementById('app')
+                app.innerHTML = components.forgetPassword;
+
+                let form = document.getElementById('forget-password-form')
+                form.onsubmit = forgetPasswordHandlerSubmit
+
+
+                async function forgetPasswordHandlerSubmit(e) {
+                    e.preventDefault()
+
+                    view.setText('forget-password-success', '')
+                    view.setText('forget-password-error', '')
+                    await firebase.auth().sendPasswordResetEmail(
+                            form.forgetPassword.value)
+                        .then(function() {
+                            view.setText('forget-password-success', 'Check email to change your password')
+                        })
+                        .catch(function(err) {
+                            // Error occurred. Inspect error.code.
+                            view.setText('forget-password-error', 'Your Email not existed or maybe deleted')
+                        });
+                }
 
 
             }

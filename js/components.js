@@ -59,6 +59,7 @@ components.logIn = `
       <div id="log-in-error" class="message-error"></div>
     </div>
     <div class="form-footer">
+    <a id="forget-password" class="mt-4" href="#">Forget Password ?</a>
       <a id="log-in-link" href="#">Not yet have an account? Register</a>
       <button type="submit">Log in</button>
     </div>
@@ -128,26 +129,26 @@ components.loading = `
 </div></div>
 `
 
-// components.showImage = `<div class="container">
-// <div class="row">
-//     <div class="col-lg-12">
-//         <h1>Hồ Sơ Cá Nhân</h1>
-//     </div>
-//     <br/>
-//     <br/>
-//     <br/>
-//     <br/>
-//     <div class="col-lg-5">
-//         <div class="card">
-//             <div class="form-group">
-//                 <label for="">Upload Image</label>
-//                 <input type="file" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-//             </div>
-//         </div>
-//     </div>
-//     <div class="col-lg-6">
-//         <h6>Email:"${Email}</h6>
-//         <h6>Name:</h6>
-//     </div>
-// </div>
-// </div>`
+components.forgetPassword = `
+<div>
+<section class="log-in-container">
+  <form id="forget-password-form" class="log-in-form">
+    <div class="form-header">
+      <h3>Mindx Chat</h3>   
+    </div>
+    <div class="form-content">
+      <div class="input-wrapper">
+      <h3>Forget Password</h3>
+        <input type="email" name="forgetPassword" placeholder="Email">
+      
+      </div>
+    </div>
+    <div class="form-footer">
+     
+      <div id="forget-password-error" class="message-error"></div>
+      <div id="forget-password-success" class="message-success"></div>
+      <button type="submit">Reset password</button>
+    </div>
+  </form>
+</section>
+</div>`
